@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Francis Mwaka K'naan | WDD 231</title>
+  <meta name="description"
+    content="Course home page for Francis Mwaka K'naan: about me and the Web and Computer Programming certificate courses.">
+  <meta name="author" content="Francis Mwaka K'naan">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/logo-icon.png" alt="" width="48" height="48">
+      <span class="site-name">Francis Mwaka</span>
+    </div>
+    <button id="menu-button" aria-expanded="false" aria-controls="primary-nav"
+      aria-label="Toggle navigation menu">☰</button>
+    <nav id="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>I am a nurse, community development professional and web developer based in Uganda. I founded the Centre for
+        Inclusive Development and OrderMySite. I build websites and software for NGOs, schools and churches. I am
+        taking WDD 231 to
+        strengthen my front-end skills and build faster, more accessible sites.</p>
+    </section>
+
+    <section class="photo" aria-labelledby="photo-heading">
+      <h2 id="photo-heading">Student Photo</h2>
+      <img src="images/francis-mwaka.jpg" alt="Portrait of Francis Mwaka" width="300" height="300">
+    </section>
+
+    <section class="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Web Certificate Courses</h2>
+      <div class="filters" role="group" aria-label="Filter courses">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="CSE" aria-pressed="false">CSE</button>
+        <button type="button" data-filter="WDD" aria-pressed="false">WDD</button>
+      </div>
+      <ul id="course-list"></ul>
+      <p id="credits" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="social">
+      <li><a href="https://www.linkedin.com/in/mwaka-francis-99098b10b" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn profile"><img src="images/linkedin.svg" alt="" width="40" height="40"></a></li>
+      <li><a href="https://github.com/Francis25695" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub profile"><img src="images/github.svg" alt="" width="40" height="40"></a></li>
+      <li><a href="https://x.com/francismwaka99" target="_blank" rel="noopener noreferrer" aria-label="X profile"><img
+            src="images/x.svg" alt="" width="40" height="40"></a></li>
+    </ul>
+    <p>&copy; <span id="currentyear"></span> • Francis Mwaka • Uganda</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+
+</html>
