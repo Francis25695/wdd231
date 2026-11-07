@@ -1,0 +1,11 @@
+{
+  "members": [
+    { "name": "Nile Coffee Roasters", "tagline": "Freshly roasted, locally grown", "address": "14 Kampala Road, Kampala", "phone": "+256 700 111 001", "email": "info@nilecoffee.example", "website": "https://example.com/nile-coffee", "image": "nile-coffee.webp", "membership": 3 },
+    { "name": "Pearl Tech Solutions", "tagline": "IT support for growing businesses", "address": "22 Jinja Road, Kampala", "phone": "+256 700 111 002", "email": "hello@pearltech.example", "website": "https://example.com/pearl-tech", "image": "pearl-tech.webp", "membership": 3 },
+    { "name": "Savanna Foods Ltd", "tagline": "Good food from local farms", "address": "8 Bombo Road, Kampala", "phone": "+256 700 111 003", "email": "sales@savannafoods.example", "website": "https://example.com/savanna-foods", "image": "savanna-foods.webp", "membership": 2 },
+    { "name": "Lakeview Hotel", "tagline": "Rest, meet and unwind", "address": "5 Entebbe Road, Kampala", "phone": "+256 700 111 004", "email": "stay@lakeview.example", "website": "https://example.com/lakeview-hotel", "image": "lakeview-hotel.webp", "membership": 2 },
+    { "name": "Mukasa Printing Works", "tagline": "Print that makes you stand out", "address": "31 Ben Kiwanuka Street, Kampala", "phone": "+256 700 111 005", "email": "print@mukasa.example", "website": "https://example.com/mukasa-printing", "image": "mukasa-printing.webp", "membership": 1 },
+    { "name": "GreenLeaf Pharmacy", "tagline": "Care for your community", "address": "17 Nasser Road, Kampala", "phone": "+256 700 111 006", "email": "care@greenleaf.example", "website": "https://example.com/greenleaf-pharmacy", "image": "greenleaf-pharmacy.webp", "membership": 1 },
+    { "name": "Kasese Crafts Cooperative", "tagline": "Handmade with pride", "address": "3 Market Lane, Kampala", "phone": "+256 700 111 007", "email": "orders@kasesecrafts.example", "website": "https://example.com/kasese-crafts", "image": "kasese-crafts.webp", "membership": 1 }
+  ]
+}
