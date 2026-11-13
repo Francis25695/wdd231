@@ -120,3 +120,97 @@ footer { background: var(--surface); padding: 1rem; }
 footer p { margin: 0.15rem 0; font-size: 0.9rem; }
 .social { display: flex; justify-content: center; gap: 1rem; margin: 1rem 0; }
 .footer-dev { margin-top: 0.5rem; }
+/* ===== Join page ===== */
+.join-layout { display: grid; gap: 1.5rem; }
+
+.join-form { background: var(--surface); border-radius: var(--radius); padding: 1rem; }
+.required-note { margin: 0 0 0.75rem; font-size: 0.9rem; }
+.join-form label { display: block; margin-bottom: 1rem; font-weight: 500; }
+.join-form input:not([type="submit"]):not([type="hidden"]),
+.join-form select,
+.join-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-radius: 4px;
+}
+.join-form input:focus-visible,
+.join-form select:focus-visible,
+.join-form textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+.join-form input:user-invalid,
+.join-form select:user-invalid { border-color: #b3261e; }
+
+.submit-btn {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 2px solid var(--text);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.submit-btn:hover { filter: brightness(1.1); }
+
+/* Membership cards + entrance animation */
+.levels { display: grid; gap: 1rem; align-content: start; }
+.level-card {
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border-top: 6px solid var(--accent);
+  animation: cardIn 0.8s ease-out both;
+}
+.level-card:nth-child(1) { animation-delay: 0.1s; border-top-color: #7a8f8c; }
+.level-card:nth-child(2) { animation-delay: 0.3s; border-top-color: #b9773a; }
+.level-card:nth-child(3) { animation-delay: 0.5s; border-top-color: #8e9aa0; }
+.level-card:nth-child(4) { animation-delay: 0.7s; border-top-color: #e0a526; }
+.level-card h2 { margin: 0 0 0.25rem; font-size: 1.2rem; }
+.level-card p { margin: 0 0 0.75rem; }
+.level-card button, .modal-inner button {
+  font: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--text);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.level-card button:hover, .modal-inner button:hover { background: var(--accent); color: var(--on-accent); }
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .level-card { animation: none; }
+}
+
+/* Modals */
+dialog {
+  width: min(90vw, 28rem);
+  padding: 0;
+  color: var(--text);
+  background: var(--bg);
+  border: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
+.modal-inner { padding: 1.25rem; }
+.modal-inner h2 { margin-top: 0; }
+.modal-inner ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+
+/* Thank-you page */
+.thanks-intro { max-width: 40rem; }
+.summary { background: var(--surface); border-radius: var(--radius); overflow: hidden; margin: 1rem 0; }
+.summary h2 { margin: 0; padding: 0.6rem 1rem; font-size: 1.1rem; background: var(--bar); color: var(--bar-text); }
+.summary dl { margin: 0; padding: 1rem; display: grid; gap: 0.25rem; }
+.summary dt { font-weight: 700; }
+.summary dd { margin: 0 0 0.6rem; overflow-wrap: anywhere; }
+.back-link { font-weight: 500; }

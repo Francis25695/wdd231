@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Join | Kampala Chamber of Commerce</title>
-    <meta name="description" content="Join the Kampala Chamber of Commerce and connect with local businesses.">
+    <meta name="description"
+        content="Apply to join the Kampala Chamber of Commerce. Compare NP, Bronze, Silver and Gold membership levels and submit your application.">
     <meta name="author" content="Francis Mwaka K'naan">
-    <link rel="icon" href="images/favicon.ico" type="image/ico">
+    <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,6 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -41,7 +44,135 @@
 
     <main>
         <h1>Join the Chamber</h1>
-        <p>Membership information and the application form are coming soon.</p>
+
+        <div class="join-layout">
+            <form action="thankyou.html" method="get" class="join-form">
+                <p class="required-note">Fields marked * are required.</p>
+
+                <label>First Name *
+                    <input type="text" name="fname" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>Last Name *
+                    <input type="text" name="lname" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="orgtitle" autocomplete="organization-title"
+                        pattern="[A-Za-z\- ]{7,}"
+                        title="At least 7 characters. Letters, hyphens and spaces only.">
+                </label>
+
+                <label>Email Address *
+                    <input type="email" name="email" title="Enter a valid email address"
+                        placeholder="name@example.com" autocomplete="email" required>
+                </label>
+
+                <label>Mobile Phone *
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+
+                <label>Business / Organization Name *
+                    <input type="text" name="organization" title="Enter your business or organization name"
+                        autocomplete="organization" required>
+                </label>
+
+                <label>Membership Level *
+                    <select name="level" title="Choose a membership level" required>
+                        <option value="" selected disabled>Select a level</option>
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business Description
+                    <textarea name="description" rows="4" title="Briefly describe your business or organization"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+
+            <div class="levels" aria-label="Membership levels">
+                <section class="level-card level-np">
+                    <h2>NP Membership</h2>
+                    <p>For non-profit organizations. No fee.</p>
+                    <button type="button" data-modal="modal-np">View benefits</button>
+                </section>
+                <section class="level-card level-bronze">
+                    <h2>Bronze Membership</h2>
+                    <p>Entry-level membership for small businesses.</p>
+                    <button type="button" data-modal="modal-bronze">View benefits</button>
+                </section>
+                <section class="level-card level-silver">
+                    <h2>Silver Membership</h2>
+                    <p>More visibility, training and event perks.</p>
+                    <button type="button" data-modal="modal-silver">View benefits</button>
+                </section>
+                <section class="level-card level-gold">
+                    <h2>Gold Membership</h2>
+                    <p>Top benefits, including home page spotlights.</p>
+                    <button type="button" data-modal="modal-gold">View benefits</button>
+                </section>
+            </div>
+        </div>
+
+        <dialog id="modal-np" aria-labelledby="title-np">
+            <div class="modal-inner">
+                <h2 id="title-np">NP Membership</h2>
+                <p><strong>Fee:</strong> Free</p>
+                <ul>
+                    <li>Directory listing</li>
+                    <li>Chamber newsletter</li>
+                    <li>Access to community networking events</li>
+                </ul>
+                <button type="button" class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze" aria-labelledby="title-bronze">
+            <div class="modal-inner">
+                <h2 id="title-bronze">Bronze Membership</h2>
+                <p><strong>Fee:</strong> UGX 100,000 per year</p>
+                <ul>
+                    <li>Everything in NP</li>
+                    <li>Discounted event tickets</li>
+                    <li>Quarterly business workshops</li>
+                </ul>
+                <button type="button" class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver" aria-labelledby="title-silver">
+            <div class="modal-inner">
+                <h2 id="title-silver">Silver Membership</h2>
+                <p><strong>Fee:</strong> UGX 250,000 per year</p>
+                <ul>
+                    <li>Everything in Bronze</li>
+                    <li>Eligible for home page spotlights</li>
+                    <li>Social media promotion</li>
+                    <li>Free training sessions</li>
+                </ul>
+                <button type="button" class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold" aria-labelledby="title-gold">
+            <div class="modal-inner">
+                <h2 id="title-gold">Gold Membership</h2>
+                <p><strong>Fee:</strong> UGX 500,000 per year</p>
+                <ul>
+                    <li>Everything in Silver</li>
+                    <li>Priority home page spotlight placement</li>
+                    <li>Sponsorship and advertising opportunities</li>
+                    <li>Free tickets to chamber luncheons</li>
+                </ul>
+                <button type="button" class="close-modal">Close</button>
+            </div>
+        </dialog>
     </main>
 
     <footer>
