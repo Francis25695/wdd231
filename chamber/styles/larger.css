@@ -26,3 +26,8 @@
     padding-right: max(1.5rem, calc((100% - 1100px) / 2));
   }
 }
+
+@media (min-width: 700px) {
+  .home .spotlights-section { grid-column: 1 / -1; }
+  #spotlights { grid-template-columns: repeat(3, 1fr); }
+}

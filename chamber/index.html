@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Kampala Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the Kampala Chamber of Commerce: local events, current weather, member spotlights and how to join our business community.">
+    <meta name="author" content="Francis Mwaka K'naan">
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home | Kampala Chamber of Commerce">
+    <meta property="og:description"
+        content="Local events, weather, member spotlights and how to join the Kampala Chamber of Commerce.">
+    <meta property="og:image" content="https://francis25695.github.io/wdd231/chamber/images/preview.jpg">
+    <meta property="og:url" content="https://francis25695.github.io/wdd231/chamber/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/logo.png" alt="chamber logo" width="48" height="48">
+            <span class="site-name">Kampala Chamber of Commerce</span>
+        </div>
+        <div class="controls">
+            <button type="button" id="theme-button" aria-label="Toggle dark mode" aria-pressed="false">◐</button>
+            <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home">
+        <h1>Welcome to the Kampala Chamber of Commerce</h1>
+
+        <div class="hero">
+            <img src="images/hero.jpg" alt="kambpala Business centre" width="1200" height="500">
+            <a href="join.html" class="cta">Join the Chamber</a>
+        </div>
+
+        <section class="panel events" aria-labelledby="events-heading">
+            <h2 id="events-heading">Current Events</h2>
+            <ul class="panel-body events-list">
+                <li><strong>12 Dec:</strong> Business Networking Breakfast</li>
+                <li><strong>19 Dec:</strong> Small Business Finance Workshop</li>
+                <li><strong>09 Jan:</strong> Chamber Members Trade Fair</li>
+            </ul>
+        </section>
+
+        <section class="panel weather" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Weather in Kampala</h2>
+            <div class="panel-body" id="weather" aria-live="polite">
+                <p>Loading weather…</p>
+            </div>
+        </section>
+
+        <section class="spotlights-section" aria-labelledby="spotlight-heading">
+            <h2 id="spotlight-heading" class="section-title">Member Spotlights</h2>
+            <div id="spotlights"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p><strong>Kampala Chamber of Commerce</strong></p>
+            <p>Plot 12, Example Road</p>
+            <p>Kampala, Uganda</p>
+            <p>info@example.com</p>
+            <p><a href="tel:+256700000000">+256 700 000 000</a></p>
+        </div>
+        <ul class="social">
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img
+                        src="images/youtube.svg" alt="" width="48" height="48"></a></li>
+            <li><a href="https://x.com/francismwaka99" target="48" rel="noopener noreferrer" aria-label="X"><img
+                        src="images/twitter.svg" alt="" width="48" height="48"></a></li>
+            <li><a href="https://www.linkedin.com/in/mwaka-francis-99098b10b" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><img src="images/linkedin.svg" alt="" width="48" height="48"></a></li>
+        </ul>
+        <div class="footer-dev">
+            <p>WDD 231 Class Project</p>
+            <p>Francis Mwaka K'naan</p>
+            <p>&copy; <span id="currentyear"></span> Kampala Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
