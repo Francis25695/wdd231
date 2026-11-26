@@ -1,0 +1,14 @@
+{
+  "leaders": [
+    { "id": "ld-01", "name": "Ocitti Robert", "title": "LC I Chairperson", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 201" },
+    { "id": "ld-02", "name": "Oryem Patrick", "title": "Village Chief", "level": "sub-village", "area": "Acopele Luzira", "phone": "+256 700 000 202" },
+    { "id": "ld-03", "name": "Lanyero Margaret", "title": "Village Chief", "level": "sub-village", "area": "Acopele Kanalela", "phone": "+256 700 000 203" },
+    { "id": "ld-04", "name": "Opira Daniel", "title": "Village Chief", "level": "sub-village", "area": "Acopele Panyimi", "phone": "+256 700 000 204" },
+    { "id": "ld-05", "name": "Odokonyero Tom", "title": "Village Chief", "level": "sub-village", "area": "Lukulia North", "phone": "+256 700 000 205" },
+    { "id": "ld-06", "name": "Akot Winnie", "title": "Cell Secretary", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 206" },
+    { "id": "ld-07", "name": "Adoch Jennifer", "title": "Secretary for Women", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 207" },
+    { "id": "ld-08", "name": "Kidega Alex", "title": "Secretary for Youth", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 208" },
+    { "id": "ld-09", "name": "Oloya Simon", "title": "Secretary for Persons with Disabilities", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 209" },
+    { "id": "ld-10", "name": "Ayoo Hellen", "title": "Secretary for the Elderly", "level": "cell", "area": "Acopele Cell", "phone": "+256 700 000 210" }
+  ]
+}

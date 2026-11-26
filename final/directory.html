@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resident Directory | IVMS Acopele Cell</title>
+    <meta name="description"
+        content="Search and filter the resident directory of Acopele Cell by group, sub-village, name or occupation, and open each resident's household profile.">
+    <meta name="author" content="Francis Mwaka K'naan">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Resident Directory | IVMS Acopele Cell">
+    <meta property="og:description"
+        content="Search and filter the resident directory of Acopele Cell, Atiak Town Council, Amuru District.">
+    <meta property="og:image" content="https://francis25695.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://francis25695.github.io/wdd231/final/directory.html">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/directory.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <div class="brand">
+            <img src="images/logo.svg" alt="" width="44" height="44">
+            <div>
+                <span class="site-name">IVMS</span>
+                <span class="site-sub">Acopele Cell</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" id="theme-button" aria-label="Toggle dark mode" aria-pressed="false">◐</button>
+            <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="intro">
+            <h1>Resident Directory</h1>
+            <p class="lead">Find residents by group, sub-village, name or occupation. Select a card to open the full
+                household profile.</p>
+            <p class="notice" role="note"><strong>Sample data:</strong> all people shown here are invented for a class
+                project.</p>
+        </section>
+
+        <p id="load-error" role="alert" hidden>Sorry, the village data could not be loaded. Please try again later.</p>
+        <p id="household-banner" class="banner" hidden></p>
+
+        <form id="filters" class="filters" role="search" aria-label="Filter residents">
+            <label>Search by name, work or area
+                <input type="search" id="search" name="search" placeholder="e.g. Okello or farmer" autocomplete="off">
+            </label>
+            <label>Group
+                <select id="category" name="category"></select>
+            </label>
+            <label>Sub-village
+                <select id="subvillage" name="subvillage"></select>
+            </label>
+            <button type="button" id="reset">Reset filters</button>
+        </form>
+
+        <p id="result-count" aria-live="polite"></p>
+        <ul id="results" class="results"></ul>
+
+        <dialog id="profile" aria-labelledby="profile-title">
+            <div id="profile-body" class="modal-inner"></div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-about">
+            <p><strong>IVMS</strong> – Integrated Village Management System</p>
+            <p>Acopele Cell, Amoyokol-North Ward</p>
+            <p>Atiak Town Council, Amuru District</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Project video</a></li>
+        </ul>
+        <div class="footer-dev">
+            <p>WDD 231 Final Project</p>
+            <p>Francis Mwaka K'naan</p>
+            <p>&copy; <span id="currentyear"></span> • Sample data only</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

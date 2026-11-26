@@ -214,3 +214,83 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
 .summary dt { font-weight: 700; }
 .summary dd { margin: 0 0 0.6rem; overflow-wrap: anywhere; }
 .back-link { font-weight: 500; }
+
+/* ===== Discover page ===== */
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "visit"
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+}
+
+.c1 { grid-area: c1; }
+.c2 { grid-area: c2; }
+.c3 { grid-area: c3; }
+.c4 { grid-area: c4; }
+.c5 { grid-area: c5; }
+.c6 { grid-area: c6; }
+.c7 { grid-area: c7; }
+.c8 { grid-area: c8; }
+
+.visit {
+  grid-area: visit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+}
+.visit[hidden] { display: none; }
+.visit p { margin: 0; font-weight: 500; }
+.visit button {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.place h2 { margin: 0; font-size: 1.25rem; }
+.place figure { margin: 0; overflow: hidden; border-radius: 6px; }
+.place img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.place address { font-style: normal; font-size: 0.9rem; }
+.place p { margin: 0; }
+.place button, #place-dialog address { font-size: 0.95rem; }
+.place button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.place button:hover { background: var(--accent); color: var(--on-accent); }
+#place-dialog address { font-style: normal; margin-bottom: 0.5rem; }

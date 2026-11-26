@@ -1,0 +1,12 @@
+{
+  "households": [
+    { "id": "hh-01", "subVillage": "Acopele Luzira", "headId": "rs-01", "roof": "Iron sheets", "water": "Borehole", "latrine": true, "income": "Crop farming" },
+    { "id": "hh-02", "subVillage": "Acopele Kanalela", "headId": "rs-04", "roof": "Grass thatch", "water": "Unprotected well", "latrine": false, "income": "Small garden" },
+    { "id": "hh-03", "subVillage": "Acopele Panyimi", "headId": "rs-06", "roof": "Iron sheets", "water": "Borehole", "latrine": true, "income": "Boda boda" },
+    { "id": "hh-04", "subVillage": "Lukulia North", "headId": "rs-09", "roof": "Iron sheets", "water": "Protected spring", "latrine": true, "income": "Carpentry" },
+    { "id": "hh-05", "subVillage": "Acopele Luzira", "headId": "rs-12", "roof": "Grass thatch", "water": "Borehole", "latrine": true, "income": "Hairdressing" },
+    { "id": "hh-06", "subVillage": "Acopele Kanalela", "headId": "rs-13", "roof": "Iron sheets", "water": "Borehole", "latrine": true, "income": "Pension and farming" },
+    { "id": "hh-07", "subVillage": "Acopele Panyimi", "headId": "rs-15", "roof": "Grass thatch", "water": "Unprotected well", "latrine": false, "income": "Casual labour" },
+    { "id": "hh-08", "subVillage": "Lukulia North", "headId": "rs-17", "roof": "Iron sheets", "water": "Protected spring", "latrine": true, "income": "Trading and farming" }
+  ]
+}

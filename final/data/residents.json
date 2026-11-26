@@ -1,0 +1,22 @@
+{
+  "residents": [
+    { "id": "rs-01", "name": "Okello Peter", "sex": "M", "dob": "1978-03-14", "householdId": "hh-01", "subVillage": "Acopele Luzira", "occupation": "Farmer", "role": "Head", "flags": [] },
+    { "id": "rs-02", "name": "Akello Grace", "sex": "F", "dob": "1982-07-02", "householdId": "hh-01", "subVillage": "Acopele Luzira", "occupation": "Trader", "role": "Spouse", "flags": ["vsla"] },
+    { "id": "rs-03", "name": "Okello Brian", "sex": "M", "dob": "2012-10-21", "householdId": "hh-01", "subVillage": "Acopele Luzira", "occupation": "Pupil", "role": "Child", "flags": [] },
+    { "id": "rs-04", "name": "Apiyo Sarah", "sex": "F", "dob": "1951-01-09", "householdId": "hh-02", "subVillage": "Acopele Kanalela", "occupation": "Farmer", "role": "Head", "flags": ["widow"] },
+    { "id": "rs-05", "name": "Ocen Denis", "sex": "M", "dob": "2010-05-30", "householdId": "hh-02", "subVillage": "Acopele Kanalela", "occupation": "Pupil", "role": "Grandchild", "flags": ["orphan"] },
+    { "id": "rs-06", "name": "Odong Moses", "sex": "M", "dob": "1990-11-12", "householdId": "hh-03", "subVillage": "Acopele Panyimi", "occupation": "Boda boda rider", "role": "Head", "flags": [] },
+    { "id": "rs-07", "name": "Atim Rose", "sex": "F", "dob": "1994-04-18", "householdId": "hh-03", "subVillage": "Acopele Panyimi", "occupation": "Tailor", "role": "Spouse", "flags": ["vsla"] },
+    { "id": "rs-08", "name": "Laker Esther", "sex": "F", "dob": "2024-08-05", "householdId": "hh-03", "subVillage": "Acopele Panyimi", "occupation": "Infant", "role": "Child", "flags": [] },
+    { "id": "rs-09", "name": "Opiyo Samuel", "sex": "M", "dob": "1969-09-23", "householdId": "hh-04", "subVillage": "Lukulia North", "occupation": "Carpenter", "role": "Head", "flags": ["pwd"], "disability": "Mobility" },
+    { "id": "rs-10", "name": "Aol Christine", "sex": "F", "dob": "1972-02-27", "householdId": "hh-04", "subVillage": "Lukulia North", "occupation": "Farmer", "role": "Spouse", "flags": ["vsla"] },
+    { "id": "rs-11", "name": "Komakech Joseph", "sex": "M", "dob": "2001-06-15", "householdId": "hh-04", "subVillage": "Lukulia North", "occupation": "Mechanic", "role": "Child", "flags": [] },
+    { "id": "rs-12", "name": "Anena Beatrice", "sex": "F", "dob": "1999-12-03", "householdId": "hh-05", "subVillage": "Acopele Luzira", "occupation": "Hairdresser", "role": "Head", "flags": ["young-mother"] },
+    { "id": "rs-13", "name": "Lagoro Michael", "sex": "M", "dob": "1955-05-11", "householdId": "hh-06", "subVillage": "Acopele Kanalela", "occupation": "Retired teacher", "role": "Head", "flags": [] },
+    { "id": "rs-14", "name": "Adong Florence", "sex": "F", "dob": "1960-10-08", "householdId": "hh-06", "subVillage": "Acopele Kanalela", "occupation": "Farmer", "role": "Spouse", "flags": [] },
+    { "id": "rs-15", "name": "Ojok Ivan", "sex": "M", "dob": "2009-03-19", "householdId": "hh-07", "subVillage": "Acopele Panyimi", "occupation": "Pupil", "role": "Head", "flags": ["child-headed", "orphan"] },
+    { "id": "rs-16", "name": "Ojok Mercy", "sex": "F", "dob": "2013-09-14", "householdId": "hh-07", "subVillage": "Acopele Panyimi", "occupation": "Pupil", "role": "Sibling", "flags": ["orphan"] },
+    { "id": "rs-17", "name": "Auma Joyce", "sex": "F", "dob": "1987-01-25", "householdId": "hh-08", "subVillage": "Lukulia North", "occupation": "Trader", "role": "Head", "flags": ["vsla"] },
+    { "id": "rs-18", "name": "Opwonya Charles", "sex": "M", "dob": "1996-08-07", "householdId": "hh-08", "subVillage": "Lukulia North", "occupation": "Farmer", "role": "Spouse", "flags": [] }
+  ]
+}

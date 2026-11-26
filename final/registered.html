@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Received | IVMS Acopele Cell</title>
+    <meta name="description" content="Confirmation of a new resident record added to the Acopele Cell village register.">
+    <meta name="author" content="Francis Mwaka K'naan">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Registration Received | IVMS Acopele Cell">
+    <meta property="og:description" content="Confirmation of a new resident record in the Acopele Cell village register.">
+    <meta property="og:image" content="https://francis25695.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://francis25695.github.io/wdd231/final/registered.html">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/registered.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <div class="brand">
+            <img src="images/logo.svg" alt="" width="44" height="44">
+            <div>
+                <span class="site-name">IVMS</span>
+                <span class="site-sub">Acopele Cell</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" id="theme-button" aria-label="Toggle dark mode" aria-pressed="false">◐</button>
+            <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="intro">
+            <h1>Registration Received</h1>
+            <p class="lead" id="thanks-message">Thank you. The record below has been added to the Acopele Cell register.</p>
+        </section>
+
+        <section id="summary" class="summary-card" aria-labelledby="summary-heading" hidden>
+            <h2 id="summary-heading">Record details</h2>
+            <dl class="profile-list">
+                <dt>Name</dt><dd id="out-name"></dd>
+                <dt>Sex</dt><dd id="out-sex"></dd>
+                <dt>Date of birth</dt><dd id="out-dob"></dd>
+                <dt>Age</dt><dd id="out-age"></dd>
+                <dt>Occupation</dt><dd id="out-occupation"></dd>
+                <dt>Sub-village</dt><dd id="out-subvillage"></dd>
+                <dt>Household</dt><dd id="out-household"></dd>
+                <dt>Groups</dt><dd id="out-groups"></dd>
+                <dt>Submitted</dt><dd id="out-timestamp"></dd>
+            </dl>
+            <p id="save-status" aria-live="polite"></p>
+        </section>
+
+        <p id="no-data" class="banner" hidden>No registration details were found. Please
+            <a href="register.html">fill in the form</a> first.</p>
+
+        <p class="actions">
+            <a class="button-link" href="directory.html">View the directory</a>
+            <a class="button-link" href="register.html">Register another person</a>
+            <a class="button-link" href="index.html">Back to the dashboard</a>
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-about">
+            <p><strong>IVMS</strong> – Integrated Village Management System</p>
+            <p>Acopele Cell, Amoyokol-North Ward</p>
+            <p>Atiak Town Council, Amuru District</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Project video</a></li>
+        </ul>
+        <div class="footer-dev">
+            <p>WDD 231 Final Project</p>
+            <p>Francis Mwaka K'naan</p>
+            <p>&copy; <span id="currentyear"></span> • Sample data only</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register a Resident | IVMS Acopele Cell</title>
+    <meta name="description"
+        content="Add a resident to the Acopele Cell village register: personal details, sub-village, household and the groups they belong to.">
+    <meta name="author" content="Francis Mwaka K'naan">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Register a Resident | IVMS Acopele Cell">
+    <meta property="og:description"
+        content="Add a resident to the Acopele Cell village register in Atiak Town Council, Amuru District.">
+    <meta property="og:image" content="https://francis25695.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://francis25695.github.io/wdd231/final/register.html">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/register.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <div class="brand">
+            <img src="images/logo.svg" alt="" width="44" height="44">
+            <div>
+                <span class="site-name">IVMS</span>
+                <span class="site-sub">Acopele Cell</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" id="theme-button" aria-label="Toggle dark mode" aria-pressed="false">◐</button>
+            <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="intro">
+            <h1>Register a Resident</h1>
+            <p class="lead">Add a person to the cell register. Fields marked * are required.</p>
+            <p class="notice" role="note"><strong>Sample data:</strong> this is a class project. Please enter only
+                invented details.</p>
+        </section>
+
+        <p id="load-error" role="alert" hidden>Sorry, the village lists could not be loaded. Please try again later.</p>
+
+        <div class="register-layout">
+            <form id="register-form" class="form-card" action="registered.html" method="get">
+                <fieldset>
+                    <legend>Personal details</legend>
+
+                    <div class="field-pair">
+                        <label class="field">Surname *
+                            <input type="text" name="surname" autocomplete="family-name" required
+                                pattern="[A-Za-z' \-]{2,}" title="At least 2 letters. Letters, spaces, hyphens and apostrophes only.">
+                        </label>
+                        <label class="field">Given name *
+                            <input type="text" name="given" autocomplete="given-name" required
+                                pattern="[A-Za-z' \-]{2,}" title="At least 2 letters. Letters, spaces, hyphens and apostrophes only.">
+                        </label>
+                    </div>
+
+                    <div class="choices-group" role="group" aria-labelledby="sex-legend">
+                        <span id="sex-legend" class="group-label">Sex *</span>
+                        <div class="choices">
+                            <label class="check"><input type="radio" name="sex" value="F" required> Female</label>
+                            <label class="check"><input type="radio" name="sex" value="M"> Male</label>
+                        </div>
+                    </div>
+
+                    <div class="field-pair">
+                        <label class="field">Date of birth *
+                            <input type="date" id="dob" name="dob" autocomplete="bday" min="1900-01-01" required
+                                title="Choose the date of birth">
+                        </label>
+                        <label class="field">Occupation *
+                            <input type="text" name="occupation" required pattern="[A-Za-z' \-]{3,}"
+                                title="At least 3 letters, e.g. Farmer, Pupil or Trader">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Where they live</legend>
+
+                    <div class="field-pair">
+                        <label class="field">Sub-village *
+                            <select id="subvillage" name="subvillage" required title="Choose a sub-village">
+                                <option value="" selected disabled>Loading…</option>
+                            </select>
+                        </label>
+                        <label class="field">Household
+                            <select id="household" name="household" title="Choose an existing household, or leave as new">
+                                <option value="">New household (not yet recorded)</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="field">Role in household
+                        <select name="role" title="How this person is related to the household head">
+                            <option value="">Not specified</option>
+                            <option>Head</option>
+                            <option>Spouse</option>
+                            <option>Child</option>
+                            <option>Grandchild</option>
+                            <option>Sibling</option>
+                            <option>Other relative</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Groups (tick all that apply)</legend>
+                    <p class="hint">Child, youth, elderly, women and men are worked out automatically from age and sex.</p>
+                    <label class="check"><input type="checkbox" id="flag-pwd" name="flags" value="pwd"> Person with a disability</label>
+                    <label class="field" id="disability-field" hidden>Type of disability
+                        <select id="disability" name="disability" disabled title="Choose the type of disability">
+                            <option>Mobility</option>
+                            <option>Visual</option>
+                            <option>Hearing</option>
+                            <option>Intellectual</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label class="check"><input type="checkbox" name="flags" value="widow"> Widow or widower</label>
+                    <label class="check"><input type="checkbox" name="flags" value="orphan"> Orphan or vulnerable child</label>
+                    <label class="check"><input type="checkbox" name="flags" value="young-mother"> Young mother</label>
+                    <label class="check"><input type="checkbox" name="flags" value="vsla"> VSLA member</label>
+                </fieldset>
+
+                <label class="check consent">
+                    <input type="checkbox" name="consent" value="yes" required>
+                    I confirm this person agrees to be recorded in the register. *
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" class="primary-btn" value="Add to Register">
+            </form>
+
+            <aside class="side-card" aria-labelledby="notes-heading">
+                <h2 id="notes-heading">Before you register</h2>
+                <ul class="notes">
+                    <li>Choose the sub-village first. Picking an existing household sets it for you.</li>
+                    <li>The new record appears in the directory and in the dashboard counts straight away.</li>
+                    <li>Records are stored only in this browser, using local storage.</li>
+                </ul>
+                <p id="local-status" aria-live="polite"></p>
+                <button type="button" id="clear-local" hidden>Remove records added in this browser</button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-about">
+            <p><strong>IVMS</strong> – Integrated Village Management System</p>
+            <p>Acopele Cell, Amoyokol-North Ward</p>
+            <p>Atiak Town Council, Amuru District</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Project video</a></li>
+        </ul>
+        <div class="footer-dev">
+            <p>WDD 231 Final Project</p>
+            <p>Francis Mwaka K'naan</p>
+            <p>&copy; <span id="currentyear"></span> • Sample data only</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

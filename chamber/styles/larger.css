@@ -36,3 +36,40 @@
   .summary dl { grid-template-columns: max-content 1fr; column-gap: 1.5rem; }
   .summary dd { margin-bottom: 0.25rem; }
 }
+
+/* ===== Discover page: medium screens (641px to 1024px) ===== */
+@media (min-width: 641px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "visit visit"
+      "c1 c1"
+      "c2 c3"
+      "c4 c4"
+      "c5 c6"
+      "c7 c8";
+  }
+
+  .place img { transition: transform 0.4s ease, filter 0.4s ease; }
+  .place figure:hover img {
+    transform: scale(1.08);
+    filter: saturate(1.4) contrast(1.05);
+  }
+}
+
+/* ===== Discover page: large screens (1025px and above) ===== */
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "visit visit visit visit"
+      "c1 c1 c2 c3"
+      "c1 c1 c4 c5"
+      "c6 c7 c7 c8";
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .place img { transition: none; }
+  .place figure:hover img { transform: none; }
+}

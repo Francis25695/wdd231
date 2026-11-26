@@ -1,0 +1,10 @@
+{
+  "district": "Amuru District",
+  "townCouncil": "Atiak Town Council",
+  "ward": "Amoyokol-North Ward",
+  "cell": "Acopele Cell",
+  "villages": [
+    { "name": "Acopele", "subVillages": ["Acopele Luzira", "Acopele Kanalela", "Acopele Panyimi"] },
+    { "name": "Lukulia", "subVillages": ["Lukulia North"] }
+  ]
+}
